@@ -1,0 +1,299 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("../assets/img/index/WhatsApp Image 2026-10-12 at 7.16.06 PM.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+h1{
+    color: red;
+}
+
+/* NAVEGACIÓN */
+header {
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+    background-color: rgba(16, 24, 32, 0.95);
+}
+
+#nav .nav {
+    justify-content: left;
+    border-bottom: 2px solid #e63946;
+}
+
+#nav .nav-link {
+    color: white;
+    transition: 0.3s;
+}
+
+#nav .nav-link:hover {
+    color: #e63946;
+}
+
+#nav .nav-link.active {
+    color: #e63946;
+    background-color: #fff;
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    flex: 1;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 60px 20px;
+    gap: 20px;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+main h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px black;
+}
+
+main h3 {
+    max-width: 800px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.5;
+    text-shadow: 2px 2px 6px black;
+}
+
+/* BOTÓN */
+/* From Uiverse.io by SelfMadeSystem */
+.button-container {
+    position: relative;
+    margin: 0 2em;
+}
+
+.button-border {
+    padding: 3px;
+    inset: 0;
+    background: #0005;
+    border-radius: inherit;
+    clip-path: path("M 90 0 C 121 0 126 5 126 33 C 126 61 121 66 90 66 L 33 66 C 5 66 0 61 0 33 C 0 5 5 0 33 0 Z"
+        );
+}
+
+.button a{
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.875em;
+    clip-path: path("M 90 0 C 115 0 120 5 120 30 C 120 55 115 60 90 60 L 30 60 C 5 60 0 55 0 30 C 0 5 5 0 30 0 Z"
+        );
+    width: 120px;
+    height: 60px;
+    background: #111215;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+}
+
+.real-button {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    z-index: 1;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.backdrop {
+    position: absolute;
+    inset: -9900%;
+    background: radial-gradient(circle at 50% 50%,
+            #0000 0,
+            #0000 20%,
+            #111111aa 50%);
+    background-size: 3px 3px;
+    z-index: -1;
+}
+
+.spin {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    opacity: 0.5;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.real-button:active~div .spin {
+    opacity: 1;
+}
+
+.spin-blur {
+    filter: blur(2em) url(#unopaq);
+}
+
+.spin-intense {
+    inset: -0.125em;
+    filter: blur(0.25em) url(#unopaq2);
+    border-radius: 0.75em;
+}
+
+.spin-inside {
+    inset: -2px;
+    border-radius: inherit;
+    filter: blur(2px) url(#unopaq3);
+    z-index: 0;
+}
+
+.spin::before {
+    content: "";
+    position: absolute;
+    inset: -150%;
+    animation:
+        speen 8s cubic-bezier(0.56, 0.15, 0.28, 0.86) infinite,
+        woah 4s infinite;
+    animation-play-state: paused;
+}
+
+.real-button:hover~div .spin::before {
+    animation-play-state: running;
+}
+
+.spin-blur::before {
+    background: linear-gradient(90deg, #f50 30%, #0000 50%, #05f 70%);
+}
+
+.spin-intense::before {
+    background: linear-gradient(90deg, #f95 20%, #0000 45% 55%, #59f 80%);
+}
+
+.spin-inside::before {
+    background: linear-gradient(90deg, #fc9 30%, #0000 45% 55%, #9cf 70%);
+}
+
+@keyframes speen {
+    0% {
+        rotate: 10deg;
+    }
+
+    50% {
+        rotate: 190deg;
+    }
+
+    to {
+        rotate: 370deg;
+    }
+}
+
+@keyframes woah {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(3deg) scale(0.75);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 35px 8%;
+
+    background-color: rgba(16, 24, 32, 0.97);
+    color: white;
+
+    border-top: 4px solid #e63946;
+}
+
+.footer-contenido {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer h2 {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer h2 span {
+    color: #e63946;
+}
+
+.subtitulo {
+    color: #e63946;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.descripcion {
+    max-width: 600px;
+    color: #cbd2d9;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.footer-linea {
+    width: 100%;
+    height: 1px;
+    background-color: #39434c;
+    margin-bottom: 18px;
+}
+
+.footer-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #cbd2d9;
+}
+
+.autor strong {
+    color: #e63946;
+}
+
+.ubicacion {
+    color: #e63946;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

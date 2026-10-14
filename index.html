@@ -7,6 +7,7 @@
     <title>Las 24 Horas de Lemans</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href=".//css/index.css">
 
 </head>
 
@@ -33,11 +34,41 @@
     <main>
         <h1>Las 24 Horas de Lemans</h1>
         <h3>Bienvenido a uno de los deportes que mas exigencia pide a sus equipos competidores</h3>
-        <div class="boton">
-            <a href=".//pages/info e histora.html">
-                <button>Que inicie la carrera</button>
-            </a>
+        <!-- From Uiverse.io by SelfMadeSystem -->
+        <svg style="position: absolute; width: 0; height: 0;">
+            <filter width="300%" x="-100%" height="300%" y="-100%" id="unopaq">
+                <feColorMatrix values="1 0 0 0 0 
+            0 1 0 0 0 
+            0 0 1 0 0 
+            0 0 0 9 0"></feColorMatrix>
+            </filter>
+            <filter width="300%" x="-100%" height="300%" y="-100%" id="unopaq2">
+                <feColorMatrix values="1 0 0 0 0 
+            0 1 0 0 0 
+            0 0 1 0 0 
+            0 0 0 3 0"></feColorMatrix>
+            </filter>
+            <filter width="300%" x="-100%" height="300%" y="-100%" id="unopaq3">
+                <feColorMatrix values="1 0 0 0.2 0 
+            0 1 0 0.2 0 
+            0 0 1 0.2 0 
+            0 0 0 2 0"></feColorMatrix>
+            </filter>
+        </svg>
+        <button class="real-button"></button>
+        <div class="backdrop"></div>
+        <div class="button-container">
+            <div class="spin spin-blur"></div>
+            <div class="spin spin-intense"></div>
+            <div class="backdrop"></div>
+            <div class="button-border">
+                <div class="spin spin-inside"></div>
+                <div class="button">
+                    <a href=".//pages/info e histora.html">Vamos a la carrera</a>
+                </div>
+            </div>
         </div>
+
     </main>
     <footer class="footer">
         <div class="footer-contenido">
