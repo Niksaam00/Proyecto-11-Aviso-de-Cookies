@@ -23,7 +23,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: red;
 }
-h1{
+
+h1 {
     color: red;
 }
 
@@ -104,7 +105,7 @@ main h3 {
         );
 }
 
-.button a{
+.button a {
     justify-content: center;
     align-items: center;
     border: none;
@@ -296,4 +297,82 @@ main h3 {
     color: #e63946;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+/* Ventana emergente de cookies */
+.ventanaEmergente {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+
+    width: 252px;
+    padding: 24px;
+    box-sizing: border-box;
+
+    background-color: #000;
+    color: #fff;
+    border-radius: 16px;
+
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+.encabezadoVentana {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.iconoGalleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+}
+
+.cerrarVentana {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+.ventanaEmergente p {
+    margin-top: 30px;
+    margin-bottom: 18px;
+
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.42;
+}
+
+.ventanaEmergente .aceptarCookies {
+    display: block;
+    width: 100%;
+    padding: 12px 8px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #fff;
+    color: #000;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.ventanaEmergente .aceptarCookies:hover {
+    background-color: #e8e8e8;
 }
